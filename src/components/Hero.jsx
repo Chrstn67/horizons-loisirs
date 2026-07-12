@@ -101,7 +101,7 @@ export default function Hero() {
         >
           <div className="hero__photo" data-speed="-0.06">
             <img
-              src="/jeunes-simulation-parachute.jpeg"
+              src="./jeunes-simulation-parachute.jpeg"
               alt="Groupe de jeunes en activités de plein air au centre de vacances Horizons & Loisirs"
               loading="eager"
             />

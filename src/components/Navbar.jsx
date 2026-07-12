@@ -45,7 +45,7 @@ export default function Navbar() {
           >
             <img
               className="nav__logo"
-              src="/logo_horizons-loisirs.jpeg"
+              src="./logo_horizons-loisirs.jpeg"
               alt="Logo Cap Soleil"
             />
             <span className="nav__brand-text">

@@ -1,0 +1,336 @@
+/* ---------- Section Formules ---------- */
+.offers {
+  background: #fff6e9;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bandeau defilant des activites */
+.offers__marquee {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+  padding-block: 0.9rem;
+  background: linear-gradient(120deg, #00c2cb, #4fe0d6, #00c2cb);
+  background-size: 220% 100%;
+  transform: rotate(-1.4deg) scale(1.04);
+  animation: offers-glow 7s ease-in-out infinite;
+}
+.offers__marquee-track {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: offers-scroll 60s linear infinite;
+}
+.offers__marquee-track .marquee-word {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.92rem, 2.2vw, 1.1rem);
+  letter-spacing: 0.04em;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+  padding-right: 1rem;
+  animation: offers-bounce 1.8s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+.offers__marquee-track .marquee-dot {
+  margin-left: 0.7rem;
+  opacity: 0.85;
+}
+@keyframes offers-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes offers-glow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes offers-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .offers__marquee,
+  .offers__marquee-track,
+  .offers__marquee-track .marquee-word {
+    animation: none;
+  }
+}
+
+.offers__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+  width: 100%;
+}
+@media (min-width: 900px) {
+  .offers__intro {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+}
+
+.offers__head {
+  max-width: 60ch;
+  min-width: 0;
+}
+@media (min-width: 900px) {
+  .offers__head {
+    flex: 1 1 58%;
+  }
+}
+
+.offers__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.4rem;
+  align-items: stretch;
+  width: 100%;
+}
+@media (min-width: 900px) {
+  .offers__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.8rem;
+  }
+}
+
+.offers__card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 36px;
+  padding: 2rem 1.7rem;
+  box-shadow: 0 6px 18px rgba(14, 58, 79, 0.08);
+  border: 2px solid transparent;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (max-width: 420px) {
+  .offers__card {
+    padding: 1.6rem 1.3rem;
+  }
+}
+
+/* Le contenu variable occupe l'espace disponible : le tarif et le CTA
+   restent ainsi toujours a la meme hauteur, quelle que soit la longueur
+   du texte au-dessus. */
+.offers__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1;
+}
+
+.offers__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: auto;
+}
+
+.offers__pitch {
+  font-size: 0.95rem;
+  color: #33505c;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+
+.offers__card::before {
+  content: "0" attr(data-step);
+  position: absolute;
+  top: 0.4rem;
+  right: 1.1rem;
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 9vw, 3.6rem);
+  line-height: 1;
+  color: var(--accent, #00c2cb);
+  opacity: 0.12;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.offers__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(14, 58, 79, 0.22);
+}
+
+.offers__card.is-featured {
+  border-color: #00c2cb;
+  box-shadow: 0 18px 40px rgba(14, 58, 79, 0.14);
+  transform: translateY(-10px);
+}
+.offers__card.is-featured:hover {
+  transform: translateY(-16px);
+}
+
+@media (min-width: 900px) {
+  .offers__card:not(:last-child)::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: -1.9rem;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00c2cb, #ff6b4a);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 6px 16px rgba(14, 58, 79, 0.25);
+    z-index: 2;
+  }
+}
+
+.offers__top {
+  border-bottom: 1px solid rgba(14, 58, 79, 0.1);
+  padding-bottom: 1.2rem;
+}
+.offers__tag {
+  display: inline-block;
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #fff;
+  background: var(--accent, #00c2cb);
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  margin-bottom: 0.7rem;
+}
+.offers__name {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.offers__duration {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #4a6572;
+  font-size: 0.92rem;
+  margin-top: 0.4rem;
+}
+
+.offers__tariff-note {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #4a6572;
+  text-align: center;
+}
+
+.offers__block .offers__from {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--accent, #00c2cb);
+  margin-bottom: 0.3rem;
+}
+.offers__block h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #4a6572;
+  margin-bottom: 0.7rem;
+}
+.offers__block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.offers__block li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.96rem;
+  overflow-wrap: break-word;
+}
+.offers__block li svg {
+  color: #00c2cb;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.offers__perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.offers__perk {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #4a6572;
+  background: #fff6e9;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.offers__cta {
+  width: 100%;
+}
+
+/* ---------- Encart : ce que favorisent les sejours, a cote de l'entete ---------- */
+.offers__closing {
+  flex: 1 1 38%;
+  min-width: 0;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(14, 58, 79, 0.08);
+  text-align: left;
+}
+.offers__closing-title {
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+.offers__closing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 1.1rem;
+}
+.offers__closing-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+}
+.offers__closing-list li svg {
+  color: #00c2cb;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.offers__closing-tagline {
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #ff6b4a;
+  font-size: 1rem;
+}

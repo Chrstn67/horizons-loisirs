@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy: #1b3a5c;
+  --orange: #f5a623;
+  --green: #7aad2a;
+  --teal: #4ec9d4;
+  --coral: #e8612a;
+  --white: #ffffff;
+  --light-bg: #fff8ee;
+  --font-display: "Pacifico", cursive;
+  --font-body: "Nunito", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--light-bg);
+  color: var(--navy);
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

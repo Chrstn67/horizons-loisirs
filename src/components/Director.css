@@ -1,0 +1,123 @@
+/* ---------- Section Directeur ---------- */
+.director {
+  background: #fff6e9;
+  padding-block: clamp(4rem, 9vw, 8rem);
+}
+
+.director__inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.director__visual {
+  position: relative;
+  justify-self: center;
+  width: min(360px, 100%);
+}
+
+.director__frame {
+  position: relative;
+  z-index: 2;
+  border-radius: 40% 40% 42% 42% / 46% 46% 40% 40%;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border: 6px solid #ffffff;
+  box-shadow: 0 30px 70px rgba(14, 58, 79, 0.22);
+}
+.director__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.director__ring {
+  position: absolute;
+  inset: -22px;
+  border: 3px dashed #00c2cb;
+  border-radius: 44% 44% 46% 46% / 50% 50% 44% 44%;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.director__since {
+  position: absolute;
+  right: -10px;
+  bottom: 8%;
+  z-index: 3;
+  background: #ffc93c;
+  color: #0e3a4f;
+  border-radius: 14px;
+  padding: 0.7rem 1rem;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(14, 58, 79, 0.14);
+  animation: float-soft 6s ease-in-out infinite;
+}
+.director__since-value {
+  display: block;
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.director__since-label {
+  font-size: 0.8rem;
+}
+
+.director__role {
+  color: #ff6b4a;
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 0.4rem;
+}
+
+.director__quote {
+  position: relative;
+  margin: 1.6rem 0;
+  padding-left: 1.4rem;
+  border-left: 4px solid #00c2cb;
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  color: #0e3a4f;
+  line-height: 1.35;
+}
+.director__quote svg {
+  color: #ffc93c;
+  margin-bottom: 0.4rem;
+}
+
+.director__bio {
+  color: #4a6572;
+  margin-bottom: 1rem;
+  max-width: 58ch;
+}
+
+.director__signature {
+  margin-top: 0.5rem;
+}
+.director__signature span {
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #009aa6;
+  font-style: italic;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .director__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .director__ring {
+    inset: -10px;
+  }
+
+  .director__since {
+    right: 6px;
+  }
+}

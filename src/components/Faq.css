@@ -1,0 +1,114 @@
+.faq {
+  background: linear-gradient(180deg, #fff6e9, #ffffff);
+}
+
+.faq__inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.faq__intro {
+  position: sticky;
+  top: 100px;
+}
+
+.faq__lead {
+  margin-top: 1rem;
+  color: #4a6572;
+  line-height: 1.65;
+  max-width: 40ch;
+}
+
+.faq__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.faq__item {
+  background: #ffffff;
+  border: 1px solid rgba(14, 58, 79, 0.12);
+  border-radius: 22px;
+  box-shadow: 0 6px 18px rgba(14, 58, 79, 0.08);
+  overflow: hidden;
+  transition:
+    box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq__item.is-open {
+  box-shadow: 0 18px 40px rgba(14, 58, 79, 0.14);
+  border-color: rgba(0, 194, 203, 0.4);
+}
+
+.faq__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0e3a4f;
+}
+
+.faq__icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(0, 194, 203, 0.15);
+  color: #009aa6;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq__item.is-open .faq__icon {
+  transform: rotate(135deg);
+  background: #ff6b4a;
+  color: #fff;
+}
+
+.faq__panel {
+  padding: 0 1.4rem 1.35rem;
+  animation: faqReveal 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq__panel p {
+  color: #4a6572;
+  line-height: 1.7;
+}
+
+@keyframes faqReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 860px) {
+  .faq__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .faq__intro {
+    position: static;
+  }
+}

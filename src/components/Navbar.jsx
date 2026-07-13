@@ -8,8 +8,8 @@ const LINKS = [
   { label: "Formules", to: "/formules" },
   { label: "L'équipe", to: "/equipe" },
   { label: "Nos valeurs", to: "/valeurs" },
-  { label: "FAQ", to: "/faq" },
   { label: "Éligibilité", to: "/eligibilite" },
+  { label: "FAQ", to: "/faq" },
 ];
 
 export default function Navbar() {

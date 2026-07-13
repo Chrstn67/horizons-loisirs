@@ -30,7 +30,7 @@ export default function Footer() {
             <div className="footer__logo-wrapper">
               <img
                 className="footer__logo-img"
-                src="/logo_horizons-loisirs.jpeg"
+                src="./logo_horizons-loisirs.jpeg"
                 alt="Logo Horizons & Loisirs"
               />
             </div>
@@ -38,15 +38,18 @@ export default function Footer() {
           </Link>
           <p>
             Le centre de vacances des enfants et adolescents de 7 à 17 ans,
-            Mulhouse et alentours. Des étés de découvertes, d&apos;amitiés et à
-            fond le grand air.
+            Mulhouse et alentours. Des séjours de découvertes, d&apos;amitiés et
+            à fond le grand air.
           </p>
           <div className="footer__socials">
             {/* 
             <a href="#" aria-label="Facebook">
               <Icon name="facebook" size={20} />
             </a> */}
-            <a href="#" aria-label="Linkedin">
+            <a
+              href="https://www.linkedin.com/in/riad-mendi-617735195/"
+              aria-label="Linkedin"
+            >
               <Icon name="linkedin" size={20} />
             </a>
             <a href="mailto:bonjour@capsoleil.fr" aria-label="E-mail">
@@ -71,8 +74,6 @@ export default function Footer() {
         <div className="footer__col">
           <h3>Contact</h3>
           <ul>
-            <li>Domaine du Grand Pré</li>
-            <li>74400 Chamonix-Mont-Blanc</li>
             <li>
               <a href="tel:+33450123456">07 68 65 87 88</a>
             </li>
@@ -98,7 +99,7 @@ export default function Footer() {
             <div className="footer__dev-logo">
               <img
                 className="footer__dev-logo-img"
-                src="/logo-dev.jpg"
+                src="./logo-dev.jpg"
                 alt="Développé par Christian HUMBERT"
               />
               <span className="footer__dev-text">
@@ -107,11 +108,7 @@ export default function Footer() {
             </div>
 
             <div className="footer__legal">
-              <a href="#">Mentions légales</a>
-              <span aria-hidden="true" className="footer__legal-separator">
-                ·
-              </span>
-              <a href="#">Confidentialité</a>
+              <Link to="/mentions-legales">Mentions légales</Link>
             </div>
           </div>
         </div>

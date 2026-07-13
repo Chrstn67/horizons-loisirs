@@ -45,7 +45,7 @@ export default function Faq() {
                     id={`faq-btn-${i}`}
                     onClick={() => toggle(i)}
                   >
-                    <span>{item.q}</span>
+                    <span dangerouslySetInnerHTML={{ __html: item.q }} />
                     <span className="faq__icon" aria-hidden="true">
                       <Icon name="plus" size={20} strokeWidth={2.4} />
                     </span>
@@ -58,7 +58,7 @@ export default function Faq() {
                   aria-labelledby={`faq-btn-${i}`}
                   hidden={!isOpen}
                 >
-                  <p>{item.a}</p>
+                  <span dangerouslySetInnerHTML={{ __html: item.a }} />
                 </div>
               </li>
             );

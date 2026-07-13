@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
 import Home from "./components/Home.jsx";
 import ValeursPage from "./components/Values.jsx";
 import EquipePage from "./components/Team.jsx";
@@ -9,6 +8,9 @@ import FormulesPage from "./components/Offers.jsx";
 import FaqPage from "./components/Faq.jsx";
 import ContactPage from "./components/Contact.jsx";
 import Eligibilite from "./components/Eligibilite.jsx";
+
+import Footer from "./components/Footer.jsx";
+import MentionsLegales from "./components/LegalPage.jsx";
 
 // Remet le scroll en haut a chaque changement de page
 function ScrollToTop() {
@@ -37,6 +39,8 @@ export default function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/eligibilite" element={<Eligibilite />} />
           <Route path="*" element={<Home />} />
+
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
         </Routes>
       </main>
       <Footer />

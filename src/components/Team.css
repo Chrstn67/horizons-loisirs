@@ -1,4 +1,4 @@
-/* ---------- Section Equipe ---------- */
+/* Team.css - Version simplifiée */
 .team {
   background: #fffaf3;
 }
@@ -88,6 +88,11 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Style spécifique pour les avatars - optionnel */
+.team__photo .avatar-image {
+  object-fit: cover;
 }
 
 .team__specialty {

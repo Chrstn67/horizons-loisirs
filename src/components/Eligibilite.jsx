@@ -9,7 +9,7 @@ export default function Eligibilite() {
   const navigate = useNavigate();
 
   const goToContact = () => {
-    navigate("/");
+    navigate("/contact");
     setTimeout(() => {
       const el = document.getElementById("contact");
       if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -18,7 +18,6 @@ export default function Eligibilite() {
 
   return (
     <div className="eligi">
-      {/* En-tete de page */}
       <header className="eligi__hero">
         <div className="eligi__hero-decor" aria-hidden="true">
           <span />
@@ -29,7 +28,7 @@ export default function Eligibilite() {
           <nav className="eligi__crumb reveal" aria-label="Fil d'ariane">
             <Link to="/">Accueil</Link>
             <Icon name="arrow" size={14} />
-            <span>Criteres d&apos;eligibilite</span>
+            <span>Critères d&apos;éligibilité</span>
           </nav>
           <h1
             className="eligi__title reveal"
@@ -42,33 +41,31 @@ export default function Eligibilite() {
             style={{ "--reveal-delay": "140ms" }}
           >
             L&apos;inscription est simple et rassurante. Voici les quelques
-            conditions a remplir pour offrir a votre enfant un ete
-            d&apos;aventures.
+            conditions à remplir pour offrir à votre enfant un été inoubliable,
+            riche en rencontres, en découvertes et en moments d&apos;aventures.
           </p>
         </div>
       </header>
 
-      {/* Encadre d'information cle */}
       <section className="container">
         <div className="eligi__highlight reveal">
           <span className="eligi__highlight-icon">
             <Icon name="briefcase" size={26} strokeWidth={2} />
           </span>
           <div>
-            <h2>Un centre reserve aux comites d&apos;entreprise partenaires</h2>
+            <h2>Un centre réservé aux comités d&apos;entreprise partenaires</h2>
             <p>
               <i>Horizons & Loisirs</i> accueille les enfants et adolescents
               dont au moins un parent est{" "}
-              <strong>affilie a un comite d&apos;entreprise partenaire</strong>.
-              Ce fonctionnement nous permet de proposer des sejours de grande
-              qualite a un tarif prefere. En cas de doute sur votre affiliation,
-              votre CE peut vous le confirmer en quelques minutes.
+              <strong>affilié à un comité d&apos;entreprise partenaire</strong>.
+              Ce fonctionnement nous permet de proposer des séjours de grande
+              qualité à un tarif préférentiel. En cas de doute sur votre
+              affiliation, votre CE peut vous le confirmer en quelques minutes.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Liste des criteres */}
       <section className="section eligi__criteria-wrap">
         <div className="container">
           <h2 className="section-title reveal">
@@ -97,7 +94,6 @@ export default function Eligibilite() {
         </div>
       </section>
 
-      {/* Etapes d'inscription */}
       <section className="section eligi__steps-wrap">
         <div className="container">
           <p className="eyebrow reveal">Simple comme bonjour</p>
@@ -105,32 +101,56 @@ export default function Eligibilite() {
             className="section-title reveal"
             style={{ "--reveal-delay": "80ms" }}
           >
-            L&apos;inscription en 4 etapes
+            L&apos;inscription en 5 étapes
           </h2>
-
           <ol className="eligi__steps">
             {steps.map((s, i) => (
               <li
                 key={s.n}
-                className="eligi__step reveal"
-                style={{ "--reveal-delay": `${i * 90}ms` }}
+                className={`eligi__step eligi__step--${i % 2 === 0 ? "left" : "right"} reveal`}
+                style={{ "--reveal-delay": `${i * 100}ms` }}
               >
-                <span className="eligi__step-num">{s.n}</span>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
+                <div className="eligi__step-card">
+                  <span className="eligi__step-tag">Étape {s.n}</span>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
+                </div>
+                <div className="eligi__step-axis">
+                  <span className="eligi__step-num">{s.n}</span>
+                  {i < steps.length - 1 && (
+                    <svg
+                      className="eligi__step-curve"
+                      viewBox="0 0 42 90"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d={
+                          i % 2 === 0
+                            ? "M 21 0 C 21 25, 42 40, 42 55 C 42 70, 21 70, 21 90"
+                            : "M 21 0 C 21 25, 0 40, 0 55 C 0 70, 21 70, 21 90"
+                        }
+                        stroke="#ff6b4a"
+                        strokeOpacity="0.25"
+                        strokeWidth="2"
+                        strokeDasharray="5 6"
+                      />
+                    </svg>
+                  )}
+                </div>
+                <div className="eligi__step-spacer" />
               </li>
             ))}
           </ol>
         </div>
       </section>
 
-      {/* Appel a l'action */}
       <section className="container">
         <div className="eligi__cta reveal">
           <div>
-            <h2>Une question sur votre eligibilite&nbsp;?</h2>
+            <h2>Une question sur votre éligibilité&nbsp;?</h2>
             <p>
-              Notre equipe vous repond et verifie votre affiliation avec vous,
+              Notre équipe vous répond et vérifie votre affiliation avec vous,
               sans engagement.
             </p>
           </div>

@@ -1,7 +1,12 @@
+// Team.jsx - Version avec dossier public
 import { team, teamDescription } from "../data/team.js";
 import { useScrollReveal } from "../hooks/useScrollReveal.js";
 import Icon from "./Icon.jsx";
 import "./Team.css";
+
+// Chemins vers les avatars dans le dossier public
+const avatarMale = "./avatar-homme.jpg";
+const avatarFemale = "./avatar-femme.jpg";
 
 export default function Team() {
   useScrollReveal();
@@ -33,30 +38,43 @@ export default function Team() {
         </header>
 
         <ul className="team__grid">
-          {team.map((m, i) => (
-            <li
-              key={m.id}
-              className="team__card reveal"
-              style={{ "--accent": m.color, "--reveal-delay": `${i * 60}ms` }}
-            >
-              <div className="team__photo">
-                <img
-                  src={m.photo}
-                  alt={`${m.name}, ${m.role}`}
-                  loading="lazy"
-                />
-                <span className="team__specialty">{m.specialty}</span>
-              </div>
-              <div className="team__body">
-                <h3 className="team__name">{m.name}</h3>
-                <p className="team__role">{m.role}</p>
-                <p className="team__text">{m.text}</p>
-              </div>
-              <span className="team__corner" aria-hidden="true">
-                <Icon name="sparkle" size={18} />
-              </span>
-            </li>
-          ))}
+          {team.map((m, i) => {
+            const hasPhoto = m.photo && m.photo.trim() !== "";
+
+            return (
+              <li
+                key={m.id}
+                className="team__card reveal"
+                style={{ "--accent": m.color, "--reveal-delay": `${i * 60}ms` }}
+              >
+                <div className="team__photo">
+                  {hasPhoto ? (
+                    <img
+                      src={m.photo}
+                      alt={`${m.name}, ${m.role}`}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <img
+                      src={m.gender === "male" ? avatarMale : avatarFemale}
+                      alt={`Avatar de ${m.name}`}
+                      loading="lazy"
+                      className="avatar-image"
+                    />
+                  )}
+                  <span className="team__specialty">{m.specialty}</span>
+                </div>
+                <div className="team__body">
+                  <h3 className="team__name">{m.name}</h3>
+                  <p className="team__role">{m.role}</p>
+                  <p className="team__text">{m.text}</p>
+                </div>
+                <span className="team__corner" aria-hidden="true">
+                  <Icon name="sparkle" size={18} />
+                </span>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>

@@ -41,8 +41,9 @@ export default function Eligibilite() {
             style={{ "--reveal-delay": "140ms" }}
           >
             L&apos;inscription est simple et rassurante. Voici les quelques
-            conditions à remplir pour offrir à votre enfant un été inoubliable,
-            riche en rencontres, en découvertes et en moments d&apos;aventures.
+            conditions à remplir pour offrir à votre enfant des moments
+            inoubliables, riche en rencontres, en découvertes et en moments
+            d&apos;aventures.
           </p>
         </div>
       </header>

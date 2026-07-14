@@ -5,6 +5,7 @@ import Home from "./components/Home.jsx";
 import ValeursPage from "./components/Values.jsx";
 import EquipePage from "./components/Team.jsx";
 import FormulesPage from "./components/Offers.jsx";
+import SejoursPage from "./components/Sejours.jsx";
 import FaqPage from "./components/Faq.jsx";
 import ContactPage from "./components/Contact.jsx";
 import Eligibilite from "./components/Eligibilite.jsx";
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/valeurs" element={<ValeursPage />} />
           <Route path="/equipe" element={<EquipePage />} />
           <Route path="/formules" element={<FormulesPage />} />
+          <Route path="/sejours" element={<SejoursPage />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/eligibilite" element={<Eligibilite />} />

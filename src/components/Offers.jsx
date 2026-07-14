@@ -63,6 +63,11 @@ export default function Offers() {
               ))}
             </ul>
             <p className="offers__closing-tagline">{sejourClosing}</p>
+
+            <Link to="/sejours" className="offers__closing-link">
+              Découvrir nos séjours
+              <Icon name="arrow" size={16} />
+            </Link>
           </aside>
         </div>
 

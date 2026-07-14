@@ -1,0 +1,428 @@
+/* ---------- Section Séjours ---------- */
+.sejours {
+  background: #fff6e9;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bandeau défilant des lieux, façon tableau des départs */
+.sejours__marquee {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: clamp(2rem, 6vw, 4rem);
+  padding-block: clamp(0.6rem, 2vw, 0.9rem);
+  background: linear-gradient(120deg, #0e3a4f, #1c5a73, #0e3a4f);
+  background-size: 220% 100%;
+  transform: rotate(-1deg) scale(1.04);
+  animation: sejours-glow 7s ease-in-out infinite;
+}
+
+.sejours__marquee-track {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: sejours-scroll 60s linear infinite;
+
+  .marquee-word {
+    display: inline-flex;
+    align-items: center;
+    font-family: "Fredoka", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.8rem, 2.2vw, 1.1rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff6e9;
+    padding-right: 1rem;
+    animation: sejours-bounce 1.8s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.1s);
+  }
+
+  .marquee-dot {
+    margin-left: 0.7rem;
+    opacity: 0.6;
+    color: #ffb347;
+  }
+}
+
+.sejours__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-bottom: clamp(2.2rem, 5vw, 3.5rem);
+  width: 100%;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+}
+
+.sejours__head {
+  max-width: 60ch;
+  min-width: 0;
+
+  @media (min-width: 900px) {
+    flex: 1 1 58%;
+  }
+}
+
+/* Encart valeurs façon étiquette de bagage : trou perforé en haut,
+   légèrement inclinée, pour rester dans l'univers du voyage. */
+.sejours__closing {
+  position: relative;
+  flex: 1 1 38%;
+  min-width: 0;
+  padding: clamp(2rem, 4vw, 2.4rem) clamp(1.3rem, 4vw, 2rem)
+    clamp(1.3rem, 4vw, 2rem);
+  border-radius: clamp(18px, 3vw, 22px);
+  background: #ffffff;
+  border: 2px dashed rgba(14, 58, 79, 0.18);
+  box-shadow: 0 6px 18px rgba(14, 58, 79, 0.08);
+  transform: rotate(1deg);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff6e9;
+    box-shadow: inset 0 0 0 3px rgba(14, 58, 79, 0.1);
+    z-index: 1;
+  }
+}
+
+.sejours__closing-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: clamp(10px, 2vw, 14px);
+}
+
+/* ---------- Grille de billets ---------- */
+.sejours__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 2.6rem);
+  align-items: stretch;
+  width: 100%;
+
+  @media (min-width: 560px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1100px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ---------- Le billet de voyage ---------- */
+.sejours__ticket {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: clamp(18px, 3vw, 24px);
+  box-shadow: 0 10px 26px rgba(14, 58, 79, 0.1);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-8px);
+    }
+  }
+}
+
+.sejours__ticket-header {
+  position: relative;
+  padding: clamp(1.2rem, 3.5vw, 1.5rem) clamp(1.2rem, 4vw, 1.6rem) 1.4rem;
+  border-radius: clamp(18px, 3vw, 24px) clamp(18px, 3vw, 24px) 0 0;
+  background: linear-gradient(
+    135deg,
+    var(--accent, #00c2cb),
+    color-mix(in srgb, var(--accent, #00c2cb) 70%, #0e3a4f 30%)
+  );
+  color: #fff;
+}
+
+.sejours__ticket-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.9rem;
+}
+
+.sejours__postmark {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.85rem;
+  border: 2px dashed rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: rotate(-4deg);
+}
+
+.sejours__ticket-code {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+.sejours__ticket-lieu {
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+  margin-bottom: 0.25rem;
+}
+
+.sejours__ticket-nom {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+/* Tampon "Complet", posé comme un vrai cachet encreur sur le billet */
+.sejours__stamp {
+  position: absolute;
+  top: clamp(0.8rem, 3vw, 1.3rem);
+  right: clamp(0.8rem, 3vw, 1.3rem);
+  width: clamp(74px, 18vw, 92px);
+  height: clamp(74px, 18vw, 92px);
+  border-radius: 50%;
+  border: 3px dashed #ffe3df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.15;
+  padding: 0.3rem;
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.72rem, 2.4vw, 0.85rem);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: rgba(217, 72, 63, 0.92);
+  box-shadow: 0 8px 18px rgba(14, 58, 79, 0.3);
+  transform: rotate(-10deg);
+  z-index: 4;
+}
+
+/* Ligne perforée entre les sections du billet, avec encoches façon
+   billet déchirable : deux demi-cercles couleur du fond de page qui
+   viennent "mordre" les bords du billet. */
+.sejours__perforation {
+  position: relative;
+  height: 0;
+  margin-inline: 0.2rem;
+  border-top: 2px dashed rgba(14, 58, 79, 0.2);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff6e9;
+  }
+
+  &::before {
+    left: -13px;
+  }
+
+  &::after {
+    right: -13px;
+  }
+}
+
+.sejours__ticket-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  flex: 1;
+  padding: 1.3rem clamp(1.2rem, 4vw, 1.6rem);
+}
+
+.sejours__boarding {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.6rem, 3vw, 1rem);
+  position: relative;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(14, 58, 79, 0.1);
+}
+
+.sejours__boarding-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.sejours__boarding-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #4a6572;
+}
+
+.sejours__boarding-date {
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.05rem, 3vw, 1.3rem);
+  color: #0e3a4f;
+  white-space: nowrap;
+}
+
+.sejours__boarding-arrow {
+  color: var(--accent, #00c2cb);
+  flex-shrink: 0;
+}
+
+.sejours__boarding-year {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: #4a6572;
+  align-self: flex-start;
+}
+
+.sejours__pitch {
+  font-size: 0.95rem;
+  color: #33505c;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+
+.sejours__infos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.86rem;
+  color: #4a6572;
+
+  p {
+    overflow-wrap: break-word;
+  }
+
+  strong {
+    color: #0e3a4f;
+  }
+}
+
+.sejours__block {
+  h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #4a6572;
+    margin-bottom: 0.7rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    font-size: 0.94rem;
+    overflow-wrap: break-word;
+
+    svg {
+      color: var(--accent, #00c2cb);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+  }
+}
+
+.sejours__perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sejours__perk {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #4a6572;
+  background: #fff6e9;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.sejours__ticket-stub {
+  padding: 1.1rem clamp(1.2rem, 4vw, 1.6rem) clamp(1.2rem, 4vw, 1.5rem);
+  border-radius: 0 0 clamp(18px, 3vw, 24px) clamp(18px, 3vw, 24px);
+}
+
+.sejours__cta {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  border-color: var(--accent, #00c2cb);
+  color: var(--accent, #00c2cb);
+}
+
+@keyframes sejours-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes sejours-glow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes sejours-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sejours__marquee,
+  .sejours__marquee-track,
+  .sejours__marquee-track .marquee-word {
+    animation: none;
+  }
+}

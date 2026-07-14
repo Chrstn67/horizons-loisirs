@@ -334,3 +334,18 @@
   color: #ff6b4a;
   font-size: 1rem;
 }
+
+.offers__closing-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #00c2cb;
+  transition: gap 0.25s ease;
+}
+.offers__closing-link:hover {
+  gap: 0.8rem;
+}

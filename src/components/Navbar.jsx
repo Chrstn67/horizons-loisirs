@@ -6,6 +6,7 @@ import "./Navbar.css";
 const LINKS = [
   { label: "Accueil", to: "/" },
   { label: "Formules", to: "/formules" },
+  { label: "Séjours", to: "/sejours" },
   { label: "L'équipe", to: "/equipe" },
   { label: "Nos valeurs", to: "/valeurs" },
   { label: "Éligibilité", to: "/eligibilite" },

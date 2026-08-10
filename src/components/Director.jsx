@@ -17,6 +17,19 @@ export default function Director() {
             />
           </div>
           <div className="director__ring" aria-hidden="true" />
+
+          {/* ---------- COMIC SPEECH BUBBLE ---------- */}
+          <div className="director__comic-bubble" aria-hidden="true">
+            <span className="emoji">💬</span> N'oubliez pas de rester connectés
+            sur nos
+            <span className="highlight"> réseaux sociaux</span>
+            <span className="emoji">📱</span> ! Des
+            <span className="highlight"> soirées festives</span> sont
+            régulièrement organisées pour rassembler les familles, partager des
+            moments de convivialité et créer des souvenirs inoubliables ensemble
+            <span className="emoji">✨</span>
+          </div>
+
           <div className="director__since">
             <span className="director__since-value">
               Depuis {director.since}

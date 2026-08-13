@@ -2,7 +2,7 @@
 export const director = {
   name: "Riad MENDI",
   role: "Directeur du centre",
-  photo: "/images/director.png",
+  photo: "./directeur-riad.jpeg",
   since: "2013",
   quote:
     "Un séjour réussi, c'est un enfant qui rentre grandi, avec des étoiles plein les yeux et l'envie de revenir.",

@@ -23,13 +23,14 @@
   z-index: 2;
   border-radius: 40% 40% 42% 42% / 46% 46% 40% 40%;
   overflow: hidden;
-  aspect-ratio: 4 / 5;
   border: 6px solid #ffffff;
   box-shadow: 0 30px 70px rgba(14, 58, 79, 0.22);
 }
+
 .director__frame img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 

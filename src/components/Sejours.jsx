@@ -66,7 +66,7 @@ export default function Sejours() {
           >
             <img
               className="sejours__closing-img"
-              src="./sejours-photo.jpg"
+              src="./groupe.jpeg"
               alt="Enfants en séjour chez Horizons & Loisirs"
             />
           </aside>

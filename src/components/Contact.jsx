@@ -20,15 +20,20 @@ const contacts = [
 ];
 
 const socials = [
+  // {
+  //   icon: "instagram",
+  //   label: "Instagram",
+  //   href: "https://instagram.com/capsoleil",
+  // },
+  // {
+  //   icon: "facebook",
+  //   label: "Facebook",
+  //   href: "https://facebook.com/capsoleil",
+  // },
   {
-    icon: "instagram",
-    label: "Instagram",
-    href: "https://instagram.com/capsoleil",
-  },
-  {
-    icon: "facebook",
-    label: "Facebook",
-    href: "https://facebook.com/capsoleil",
+    icon: "linkedin",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/riad-mendi-617735195/",
   },
 ];
 

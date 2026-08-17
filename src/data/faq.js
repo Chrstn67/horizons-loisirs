@@ -6,7 +6,7 @@ export const faqItems = [
   },
   {
     q: "L'encadrement est-il diplômé ?",
-    a: "Oui. Toute l'équipe est titulaire du BAFA, du BAFD ou de brevets d'État pour les activités spécifiques. Une assistante sanitaire est présente en permanence sur le site pour veiller au bien-être et à la sécurité des enfants.",
+    a: "Oui. Toute l'équipe est titulaire du BAFA, du BAFD ou de brevets d'État pour les activités spécifiques. Un(e) assistant(e) sanitaire est présente en permanence sur le site pour veiller au bien-être et à la sécurité des enfants.",
   },
   {
     q: "Comment se passe le transport ?",
@@ -46,7 +46,7 @@ export const faqItems = [
   },
   {
     q: "Que se passe-t-il si mon enfant est malade pendant le séjour ?",
-    a: "Notre équipe veille quotidiennement à la santé des enfants. En cas de besoin, l'assistante sanitaire prend les mesures nécessaires et les familles sont contactées si la situation le nécessite.",
+    a: "Notre équipe veille quotidiennement à la santé des enfants. En cas de besoin, l'assistant(e) sanitaire prend les mesures nécessaires et les familles sont contactées si la situation le nécessite.",
   },
   {
     q: "Quel est le rythme d'une journée type au centre ?",

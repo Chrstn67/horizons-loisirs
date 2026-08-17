@@ -15,8 +15,8 @@ export const sejours = [
     saison: "Été", // à ajuster
     nom: "Séjour à Barcelone",
     lieu: "Barcelone, Espagne",
-    dateDebut: "2026-07-06", // à ajuster
-    dateFin: "2026-07-13", // à ajuster (durée 7 jours)
+    dateDebut: "À définir", // à ajuster
+    dateFin: "À définir", // à ajuster (durée 7 jours)
     ageMin: 14,
     ageMax: 17,
     placesTotal: "16-24 selon encadrement", // à ajuster
@@ -38,9 +38,9 @@ export const sejours = [
     accent: "#00c2cb",
     saison: "Été", // à ajuster
     nom: "Séjour Sports mécaniques",
-    lieu: "", // à ajuster
-    dateDebut: "2026-07-20", // à ajuster
-    dateFin: "2026-07-27", // à ajuster (durée 7 jours)
+    lieu: "--", // à ajuster
+    dateDebut: "À définir", // à ajuster
+    dateFin: "À définir", // à ajuster (durée 7 jours)
     ageMin: 7,
     ageMax: 13,
     placesTotal: "16-24 selon encadrement", // à ajuster
@@ -62,9 +62,9 @@ export const sejours = [
     accent: "#4fa8d8",
     saison: "À définir", // à ajuster
     nom: "Stage découverte – Natation",
-    lieu: "", // à ajuster
-    dateDebut: "2026-02-16", // à ajuster
-    dateFin: "2026-02-20", // à ajuster (durée 5 jours)
+    lieu: "--", // à ajuster
+    dateDebut: "À définir", // à ajuster
+    dateFin: "À définir", // à ajuster (durée 5 jours)
     ageMin: 7,
     ageMax: 17,
     placesTotal: "16-24 selon encadrement", // à ajuster
@@ -84,9 +84,9 @@ export const sejours = [
     accent: "#a97e5b",
     saison: "À définir", // à ajuster
     nom: "Stage découverte – Équitation",
-    lieu: "", // à ajuster
-    dateDebut: "2026-10-19", // à ajuster
-    dateFin: "2026-10-23", // à ajuster (durée 5 jours)
+    lieu: "--", // à ajuster
+    dateDebut: "À définir", // à ajuster
+    dateFin: "À définir", // à ajuster (durée 5 jours)
     ageMin: 7,
     ageMax: 10,
     placesTotal: "16-24 selon encadrement", // à ajuster

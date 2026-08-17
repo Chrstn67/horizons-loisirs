@@ -90,9 +90,9 @@ export default function Footer() {
             <p>
               © {new Date().getFullYear()} <i>Horizons & Loisirs</i>
             </p>
-            <p className="footer__bottom-tagline">
+            {/* <p className="footer__bottom-tagline">
               Centre de vacances agréé Jeunesse et Sports
-            </p>
+            </p> */}
           </div>
 
           <div className="footer__bottom-right">

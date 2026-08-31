@@ -37,7 +37,7 @@ export default function Hero() {
         <div className="hero__content">
           <p className="eyebrow reveal">
             <Icon name="sun" size={16} strokeWidth={2.4} />
-            Solution CSE & entreprises - Sur toute la France
+            Solution CSE & entreprises - Dans toute la France
           </p>
 
           <h1

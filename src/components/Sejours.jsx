@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { sejours } from "../data/sejours.js";
+import { sejours } from "../data/Sejours.js";
 import { useScrollReveal } from "../hooks/useScrollReveal.js";
 import Icon from "./Icon.jsx";
 import "./Sejours.css";

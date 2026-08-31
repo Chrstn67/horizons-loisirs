@@ -37,9 +37,9 @@ export default function Footer() {
             <span className="footer__logo-text">Horizons & Loisirs</span>
           </Link>
           <p>
-            Le centre de vacances des enfants et adolescents de 7 à 17 ans,
-            Mulhouse et alentours. Des séjours de découvertes, d&apos;amitiés et
-            à fond le grand air.
+            Le centre de vacances des enfants et adolescents de 7 à 17 ans, à
+            travers toute la France. Des séjours de découvertes, d&apos;amitiés
+            et à fond le grand air.
           </p>
           <div className="footer__socials">
             {/* 

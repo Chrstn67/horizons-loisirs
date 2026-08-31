@@ -24,14 +24,16 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy via SFTP
+      - name: Install lftp
+        run: sudo apt-get install -y lftp
+
+      - name: Deploy via FTP
         run: |
-          sudo apt-get install -y lftp
           lftp -c "
-            set sftp:auto-confirm yes;
+            set ftp:ssl-allow no;
             set net:timeout 30;
             set net:max-retries 3;
-            open sftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@ftp.cluster100.hosting.ovh.net:22;
+            open -u \"${{ secrets.FTP_USERNAME }}\",\"${{ secrets.FTP_PASSWORD }}\" ftp://ftp.cluster121.hosting.ovh.net;
             cd www;
             lcd ./dist;
             mirror -R --delete . .

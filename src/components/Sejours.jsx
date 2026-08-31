@@ -6,12 +6,43 @@ import "./Sejours.css";
 
 // Une date ISO -> { jour, mois } pour l'affichage "carte d'embarquement"
 // ex: "2026-07-13" -> { jour: "13", mois: "juil." }
+// Si la date est manquante ou invalide -> { jour: "--", mois: "--" }
 function splitDate(iso) {
+  if (!iso || iso === "À définir" || typeof iso !== "string") {
+    return {
+      jour: "--",
+      mois: "--",
+    };
+  }
+
   const d = new Date(iso);
+
+  // Vérifier si la date est valide
+  if (isNaN(d.getTime())) {
+    return {
+      jour: "--",
+      mois: "--",
+    };
+  }
+
   return {
     jour: d.toLocaleDateString("fr-FR", { day: "2-digit" }),
     mois: d.toLocaleDateString("fr-FR", { month: "short" }).replace(".", ""),
   };
+}
+
+// Fonction utilitaire pour extraire l'année de façon sécurisée
+function getSafeYear(dateStr, fallback = "----") {
+  if (!dateStr || dateStr === "À définir" || typeof dateStr !== "string") {
+    return fallback;
+  }
+
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) {
+    return fallback;
+  }
+
+  return d.getFullYear();
 }
 
 export default function Sejours() {
@@ -77,8 +108,8 @@ export default function Sejours() {
             const complet = s.full;
             const depart = splitDate(s.dateDebut);
             const retour = splitDate(s.dateFin);
-            const annee = new Date(s.dateFin).getFullYear();
-            const numeroBillet = `HL-${new Date(s.dateDebut).getFullYear()}-${String(i + 1).padStart(2, "0")}`;
+            const annee = getSafeYear(s.dateFin, "À Venir");
+            const numeroBillet = `HL-${annee}-${String(i + 1).padStart(2, "0")}`;
 
             return (
               <li

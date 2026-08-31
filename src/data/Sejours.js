@@ -12,7 +12,7 @@ export const sejours = [
   {
     id: "barcelone",
     accent: "#ff6b4a",
-    saison: "Été", // à ajuster
+    saison: "À définir", // à ajuster
     nom: "Séjour à Barcelone",
     lieu: "Barcelone, Espagne",
     dateDebut: "À définir", // à ajuster
@@ -22,7 +22,7 @@ export const sejours = [
     placesTotal: "16-24 selon encadrement", // à ajuster
     full: false,
     hebergement: "Villa avec piscine",
-    transport: "Départ en car depuis Strasbourg", // à ajuster
+    transport: "Avion", // à ajuster
     pitch:
       "Une semaine entre farniente et découverte de la ville, avec une villa rien que pour le groupe et sa piscine.",
     activites: [
@@ -36,7 +36,7 @@ export const sejours = [
   {
     id: "sports-mecaniques",
     accent: "#00c2cb",
-    saison: "Été", // à ajuster
+    saison: "À définir", // à ajuster
     nom: "Séjour Sports mécaniques",
     lieu: "--", // à ajuster
     dateDebut: "À définir", // à ajuster
@@ -45,16 +45,11 @@ export const sejours = [
     ageMax: 13,
     placesTotal: "16-24 selon encadrement", // à ajuster
     full: false,
-    hebergement: "Hébergement à préciser", // à ajuster
-    transport: "Transport à préciser", // à ajuster
+    hebergement: "Auberge jeunesse", // à ajuster
+    transport: "Minibus", // à ajuster
     pitch:
       "Un séjour pensé pour les passionnés de mécanique et de sensations, entre pilotage encadré et ateliers techniques.",
-    activites: [
-      "Karting",
-      "Initiation pilotage",
-      "Buggy",
-      "Ateliers mécanique",
-    ], // à ajuster
+    activites: ["Karting", "Initiation pilotage", "Quad", "Ateliers mécanique"], // à ajuster
     perks: ["Encadrement diplômé", "Matériel fourni"], // à ajuster
   },
   {
@@ -69,11 +64,16 @@ export const sejours = [
     ageMax: 17,
     placesTotal: "16-24 selon encadrement", // à ajuster
     full: false,
-    hebergement: "Stage en externat (à confirmer)", // à ajuster
-    transport: "Transport à préciser", // à ajuster
+    hebergement: "Stage en externat", // à ajuster
+    transport: "Minibus", // à ajuster
     pitch:
       "Cinq jours pour apprendre ou se perfectionner en natation, encadrés par des maîtres-nageurs.",
-    activites: ["Cours de natation", "Jeux aquatiques", "Initiation plongée"], // à ajuster
+    activites: [
+      "Cours de natation",
+      "Jeux aquatiques",
+      "Initiation plongée",
+      "Sensibilation secourisme",
+    ], // à ajuster
     perks: [
       "Encadrement par des maîtres-nageurs diplômés",
       "Tous niveaux acceptés",
@@ -91,8 +91,8 @@ export const sejours = [
     ageMax: 10,
     placesTotal: "16-24 selon encadrement", // à ajuster
     full: false,
-    hebergement: "Hébergement à préciser", // à ajuster
-    transport: "Transport à préciser", // à ajuster
+    hebergement: "Auberge de jeunesse", // à ajuster
+    transport: "Minibus", // à ajuster
     pitch:
       "Une découverte en douceur du monde du cheval : approche, soins et premières balades à poney.",
     activites: ["Initiation équitation", "Soins aux chevaux", "Balade à poney"], // à ajuster

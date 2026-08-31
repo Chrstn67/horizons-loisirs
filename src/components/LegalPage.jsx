@@ -52,7 +52,9 @@ export default function LegalPage() {
             </li>
             <li>
               E-mail :{" "}
-              <a href="mailto:bonjour@capsoleil.fr">bonjour@capsoleil.fr</a>
+              <a href="mailto:contact@horizons-loisirs.fr">
+                contact@horizons-loisirs.fr
+              </a>
             </li>
           </ul>
         </section>
@@ -119,8 +121,10 @@ export default function LegalPage() {
             Nous portons une attention particulière à l&apos;accessibilité de ce
             site. Si vous rencontrez une difficulté pour accéder à un contenu,
             merci de nous en informer à{" "}
-            <a href="mailto:bonjour@capsoleil.fr">bonjour@capsoleil.fr</a> afin
-            que nous puissions y remédier.
+            <a href="mailto:contact@horizons-loisirs.fr">
+              contact@horizons-loisirs.fr
+            </a>{" "}
+            afin que nous puissions y remédier.
           </p>
         </section>
 
@@ -147,7 +151,10 @@ export default function LegalPage() {
           <p>
             Le responsable du traitement des données à caractère personnel
             collectées sur ce site est <strong>Riad MENDI</strong>, joignable à{" "}
-            <a href="mailto:bonjour@capsoleil.fr">bonjour@capsoleil.fr</a>.
+            <a href="mailto:contact@horizons-loisirs.fr">
+              contact@horizons-loisirs.fr
+            </a>
+            .
           </p>
         </section>
 
@@ -278,9 +285,11 @@ export default function LegalPage() {
           </p>
           <p>
             Pour exercer ces droits, contactez-nous à{" "}
-            <a href="mailto:bonjour@capsoleil.fr">bonjour@capsoleil.fr</a>, en
-            précisant votre identité. Une réponse vous sera apportée dans un
-            délai maximum d&apos;un mois.
+            <a href="mailto:contact@horizons-loisirs.fr">
+              contact@horizons-loisirs.fr
+            </a>
+            , en précisant votre identité. Une réponse vous sera apportée dans
+            un délai maximum d&apos;un mois.
           </p>
           <p>
             Si vous estimez que vos droits ne sont pas respectés, vous pouvez

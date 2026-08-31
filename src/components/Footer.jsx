@@ -52,7 +52,7 @@ export default function Footer() {
             >
               <Icon name="linkedin" size={20} />
             </a>
-            <a href="mailto:bonjour@capsoleil.fr" aria-label="E-mail">
+            <a href="mailto:contact@horizons-loisirs.fr" aria-label="E-mail">
               <Icon name="mail" size={20} />
             </a>
           </div>
@@ -78,7 +78,9 @@ export default function Footer() {
               <a href="tel:+33450123456">07 68 65 87 88</a>
             </li>
             <li>
-              <a href="mailto:bonjour@capsoleil.fr">bonjour@capsoleil.fr</a>
+              <a href="mailto:contact@horizons-loisirs.fr">
+                contact@horizons-loisirs.fr
+              </a>
             </li>
           </ul>
         </div>

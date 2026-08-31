@@ -13,8 +13,8 @@ const contacts = [
   {
     icon: "mail",
     label: "E-mail",
-    value: "bonjour@capsoleil.fr",
-    href: "mailto:bonjour@capsoleil.fr",
+    value: "contact@horizons-loisirs.fr",
+    href: "mailto:contact@horizons-loisirs.fr",
     cta: "Écrire",
   },
 ];

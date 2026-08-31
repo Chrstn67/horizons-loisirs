@@ -54,7 +54,10 @@ export default function Confidentialite() {
             (RGPD), vous disposez d&apos;un droit d&apos;accès, de rectification
             et de suppression de vos données. Pour exercer ce droit,
             contactez-nous à{" "}
-            <a href="mailto:bonjour@capsoleil.fr">bonjour@capsoleil.fr</a>.
+            <a href="mailto:contact@horizons-loisirs.fr">
+              contact@horizons-loisirs.fr
+            </a>
+            .
           </p>
         </section>
 

@@ -34,7 +34,5 @@ jobs:
             set net:timeout 30;
             set net:max-retries 3;
             open -u \"${{ secrets.FTP_USERNAME }}\",\"${{ secrets.FTP_PASSWORD }}\" ftp://ftp.cluster121.hosting.ovh.net;
-            cd www;
-            lcd ./dist;
-            mirror -R --delete . .
+            mirror -R --delete --verbose ./dist /www
           "

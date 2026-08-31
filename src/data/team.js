@@ -8,7 +8,7 @@ export const director = {
     "Un séjour réussi, c'est un enfant qui rentre grandi, avec des étoiles plein les yeux et l'envie de revenir.",
   bio: [
     "Passionné par le monde de l'animation depuis plus de 13 ans, j'accompagne les enfants et les jeunes avec une conviction forte : chaque séjour est une occasion d'apprendre, de grandir et de s'épanouir.",
-    "Titulaire du BAFA, du BAPAAT, du BAFD et du BPJEPS, j'ai développé une solide expérience dans la direction de centres, l'encadrement d'équipes et l'organisation de séjours, en veillant toujours à la sécurité, à la qualité de l'accueil et au respect de la réglementation.",
+    "Titulaire du BAFA, du BAPAAT, et du BAFD, j'ai développé une solide expérience dans la direction de centres, l'encadrement d'équipes et l'organisation de séjours, en veillant toujours à la sécurité, à la qualité de l'accueil et au respect de la réglementation.",
     "Mes valeurs reposent sur la bienveillance, le partage et le respect du rythme de chaque enfant. Mon ambition est d'offrir un cadre sécurisant où chacun peut gagner en autonomie, en confiance et repartir avec des souvenirs inoubliables.",
     "Je suis convaincu que l'animation est un véritable outil d'éducation populaire, permettant de transmettre des valeurs de citoyenneté, de respect, de solidarité et de vivre-ensemble. C'est avec enthousiasme, professionnalisme et engagement que je continue à construire des projets éducatifs ambitieux, au service des enfants, des familles et des équipes que j'accompagne.",
   ],

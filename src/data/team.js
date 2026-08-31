@@ -55,7 +55,7 @@ export const team = [
   },
   {
     id: 4,
-    name: "Tom",
+    name: "Tomy",
     role: "Animateur arts & scène",
     specialty: "Musique & spectacle",
     photo: "",
@@ -75,7 +75,7 @@ export const team = [
   },
   {
     id: 6,
-    name: "Yanis",
+    name: "Jean-Basile",
     role: "Moniteur nautique",
     specialty: "Canoë & baignade",
     photo: "",

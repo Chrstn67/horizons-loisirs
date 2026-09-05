@@ -106,7 +106,13 @@ export default function Footer() {
           </div>
 
           <div className="footer__bottom-right">
-            <div className="footer__dev-logo">
+            <a
+              href="https://www.linkedin.com/in/christian-humbert-developpeur-web/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__dev-logo"
+              aria-label="LinkedIn de Christian HUMBERT"
+            >
               <img
                 className="footer__dev-logo-img"
                 src="./logo-dev.jpg"
@@ -115,7 +121,7 @@ export default function Footer() {
               <span className="footer__dev-text">
                 Développé par Christian HUMBERT
               </span>
-            </div>
+            </a>
 
             <div className="footer__legal">
               <Link to="/mentions-legales">Mentions légales</Link>

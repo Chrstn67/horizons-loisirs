@@ -8,7 +8,6 @@ const cols = [
     links: [
       { label: "Nos valeurs", href: "/valeurs" },
       { label: "L'équipe", href: "/equipe" },
-      { label: "Le directeur", href: "/directeur" },
     ],
   },
   {
@@ -18,6 +17,24 @@ const cols = [
       { label: "Critères d'éligibilité", href: "/eligibilite" },
       { label: "Questions fréquentes", href: "/faq" },
     ],
+  },
+];
+
+const socials = [
+  {
+    href: "https://www.instagram.com/horizons.loisirs?utm_source=qr",
+    label: "Instagram",
+    icon: "instagram",
+  },
+  {
+    href: "https://www.linkedin.com/in/riad-mendi-617735195/",
+    label: "LinkedIn",
+    icon: "linkedin",
+  },
+  {
+    href: "mailto:contact@horizons-loisirs.fr",
+    label: "E-mail",
+    icon: "mail",
   },
 ];
 
@@ -41,21 +58,6 @@ export default function Footer() {
             travers toute la France. Des séjours de découvertes, d&apos;amitiés
             et à fond le grand air.
           </p>
-          <div className="footer__socials">
-            {/* 
-            <a href="#" aria-label="Facebook">
-              <Icon name="facebook" size={20} />
-            </a> */}
-            <a
-              href="https://www.linkedin.com/in/riad-mendi-617735195/"
-              aria-label="Linkedin"
-            >
-              <Icon name="linkedin" size={20} />
-            </a>
-            <a href="mailto:contact@horizons-loisirs.fr" aria-label="E-mail">
-              <Icon name="mail" size={20} />
-            </a>
-          </div>
         </div>
 
         {cols.map((col) => (
@@ -75,7 +77,7 @@ export default function Footer() {
           <h3>Contact</h3>
           <ul>
             <li>
-              <a href="tel:+33450123456">07 68 65 87 88</a>
+              <a href="tel:+33768658788">07 68 65 87 88</a>
             </li>
             <li>
               <a href="mailto:contact@horizons-loisirs.fr">
@@ -83,6 +85,15 @@ export default function Footer() {
               </a>
             </li>
           </ul>
+
+          <h3 className="footer__col-subtitle">Réseaux</h3>
+          <div className="footer__socials">
+            {socials.map(({ href, label, icon }) => (
+              <a key={label} href={href} aria-label={label}>
+                <Icon name={icon} size={20} />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -92,9 +103,6 @@ export default function Footer() {
             <p>
               © {new Date().getFullYear()} <i>Horizons & Loisirs</i>
             </p>
-            {/* <p className="footer__bottom-tagline">
-              Centre de vacances agréé Jeunesse et Sports
-            </p> */}
           </div>
 
           <div className="footer__bottom-right">

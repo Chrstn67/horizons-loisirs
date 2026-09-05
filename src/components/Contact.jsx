@@ -20,11 +20,11 @@ const contacts = [
 ];
 
 const socials = [
-  // {
-  //   icon: "instagram",
-  //   label: "Instagram",
-  //   href: "https://instagram.com/capsoleil",
-  // },
+  {
+    icon: "instagram",
+    label: "Instagram",
+    href: "https://www.instagram.com/horizons.loisirs?utm_source=qr",
+  },
   // {
   //   icon: "facebook",
   //   label: "Facebook",

@@ -431,3 +431,22 @@
     font-size: 0.65rem;
   }
 }
+/* Sous-titre dans une colonne (ex: "Réseaux" sous Contact) */
+.footer__col-subtitle {
+  margin-top: 1.8rem;
+  margin-bottom: 0.9rem;
+}
+
+/* Réseaux dans la colonne Contact */
+.footer__col .footer__socials {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+/* Réseaux centré sur mobile */
+@media (max-width: 480px) {
+  .footer__col .footer__socials {
+    justify-content: center;
+  }
+}

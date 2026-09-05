@@ -11,11 +11,6 @@ export default function LegalPage() {
   return (
     <main className="legal-page">
       <div className="legal-page__inner">
-        <Link to="/" className="legal-page__back">
-          ← Retour à l&apos;accueil
-        </Link>
-
-        <span className="legal-page__eyebrow">Informations légales</span>
         <h1 className="legal-page__title">
           Mentions légales & Politique de confidentialité
         </h1>
@@ -39,13 +34,13 @@ export default function LegalPage() {
           <h3>1.1 Éditeur du site</h3>
           <p>
             Le présent site est édité par <strong>Horizons & Loisirs</strong>,
-            [forme juridique, ex. association loi 1901], dont le siège social
-            est situé au [adresse complète], 68100 Mulhouse.
+            Entreprise, dont le siège social est situé Rue Léon Bourgeois, 68100
+            Mulhouse.
           </p>
           <ul>
-            <li>SIRET : [numéro SIRET]</li>
-            <li>Numéro RNA (association) : [numéro RNA]</li>
-            <li>Numéro d&apos;agrément Jeunesse et Sports : [numéro]</li>
+            <li>SIRET : 923 339 899 00018</li>
+
+            {/* <li>Numéro d&apos;agrément Jeunesse et Sports : [numéro]</li> */}
             <li>Directeur de la publication : Riad Mendi</li>
             <li>
               Téléphone : <a href="tel:+33768658788">07 68 65 87 88</a>

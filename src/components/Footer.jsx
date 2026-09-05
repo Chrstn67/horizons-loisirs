@@ -31,11 +31,11 @@ const socials = [
     label: "LinkedIn",
     icon: "linkedin",
   },
-  {
-    href: "mailto:contact@horizons-loisirs.fr",
-    label: "E-mail",
-    icon: "mail",
-  },
+  // {
+  //   href: "mailto:contact@horizons-loisirs.fr",
+  //   label: "E-mail",
+  //   icon: "mail",
+  // },
 ];
 
 export default function Footer() {
